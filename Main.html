@@ -4,141 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정회산 포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-        font-family: sans-serif, Arial;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+            font-family: 'Manrope', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2, h3 {
+            margin-bottom: 10px;
         }
         p {
-        font-size: 1em;
-        color: #adadad;
+            font-size: 1em;
+            color: #999999;
+            margin-bottom: 10px;
         }
         .container {
-        max-width: 800px;
-        width: 100%;
-        padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
         }
         .header {
-        display: flex;
-        justify-content: flex-end;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
         }
-        .header button{
-            margin-right: 10px;
+        .header a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s, text-decoration 0.3s, opacity 0.3s;
+        }
+        .header a:hover {
+            text-decoration: underline;
+            opacity: 0.5;
         }
         .intro, .about, .projects {
-        margin-bottom: 40px;
-        text-align: center;
+            margin-bottom: 40px;
+            text-align: center;
         }
         .intro h1 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
-        .intro h2 {
-        font-size: 1.5em;
-        color: gray;
+        .intro img {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
         }
         .contact {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
         }
         .contact-info, .contact-form {
-        width: 48%;
+            width: 48%;
+        }
+        .contact-form p {
+            font-size: 0.8em;
         }
         .contact-form input, .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
         .contact-form button {
-        padding: 10px 20px;
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
         .project-list {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .project {
-        width: 48%;
-        margin-bottom: 20px;
-        text-align: center;
+            width: 340px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
         }
         .project img {
-        width: 100%;
-        border-radius: 8px;
-        background-color: #e0e0e0;
-        height: 150px;
+            width: 100%;
+            border-radius: 8px;
+            background-color: #e0e0e0;
+            height: 150px;
+            margin-bottom: 10px;
         }
     </style>
-    <!-- <link rel="stylesheets" href="Css.css"> -->
 </head>
 <body>
-    <body>
-        <div class="container">
-            <div class="header">
-                <button>About</button>
-                <button>Contact</button>
-                <button>Projects</button>
+    <div class="container">
+        <div class="header">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="intro">
+            <h1>Hi, I'm San</h1>
+            <p>Junior Developer</p>
+            <div>
+                <img src="profile.png" alt="Profile Image" style="width: 100%; max-width: 400px; height: auto;">
             </div>
-            <div class="intro">
-                <h1>Hi, I'm San</h1>
-                <p>Junior Developer</p>
-                <div>
-                    <img src="profile.png" alt="Profile Image" style="width: 100%; max-width: 400px; height: auto;">
+        </div>
+        <div id="about" class="about">
+            <h2>About Me</h2>
+            <p>
+                간략한 자기소개<br>
+                경력과 경험<br>
+                주요 기술 및 교육, 자격증 보유<br>
+                개인적인 이야기와 열정과 동기<br>
+            </p>
+        </div>
+        <div id="contact" class="contact">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>Email: sango7199@gmail.com</p>
+                <p>Phone: 010-7338-2853</p>
+                <p>Github: <a href="https://github.com/sango7199" target="_blank">https://github.com/sango7199</a></p>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <p>채용 문의, 프로젝트 관련 피드백 등 다양한 의견과 제안을 환영합니다.<br>
+                    편하게 언제든지 메시지를 보내주시면 감사하겠습니다.<br>
+                    여러분의 소중한 의견을 기다리겠습니다.
+                </p>
+                <form action="mailto:sango7199@gmail.com" method="get" enctype="text/plain">
+                    <input type="email" name="email" placeholder="보낸 사람" required>
+                    <input type="text" name="subject" placeholder="제목" required>
+                    <textarea name="body" rows="5" placeholder="" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div id="projects" class="projects">
+            <h2>My Projects</h2>
+            <p>Check out some of my recent projects.</p>
+            <div class="project-list">
+                <div class="project">
+                    <img src="project-placeholder.png" alt="Bootcamp Semi-Project">
+                    <h4>Bootcamp Semi-Project</h4>
+                    <p>부트캠프에서 기업 OJT를 목적으로 스프링을 사용하여 구현한 간단한 세미 프로젝트입니다.</p>
                 </div>
-            </div>
-            <div class="about">
-                <h2>About Me</h2>
-                <p>I'm a passionate and creative individual who loves transforming ideas into beautiful designs. My journey in the digital world has been an exciting adventure, and I'm always eager to explore new possibilities.</p>
-            </div>
-            <div class="contact">
-                <div class="contact-info">
-                    <h2>Contact Me</h2>
-                    <p>Email: info@example.com<br>
-                       Phone: +123 456 7890</p>
+                <div class="project">
+                    <img src="project-placeholder.png" alt="Bootcamp Main-Project">
+                    <h4>Bootcamp Main-Project</h4>
+                    <p>A description of the project goes here.</p>
                 </div>
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
-                    <form action="#" method="post">
-                        <input type="email" name="email" placeholder="Enter your email" required>
-                        <input type="text" name="subject" placeholder="Subject" required>
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
+                <div class="project">
+                    <img src="project-placeholder.png" alt="Portfolio Project">
+                    <h4>Portfolio Project</h4>
+                    <p>A description of the project goes here.</p>
                 </div>
-            </div>
-            <div class="projects">
-                <h2>My Projects</h2>
-                <p>Check out some of my recent projects.</p>
-                <div class="project-list">
-                    <div class="project">
-                        <img src="project-placeholder.png" alt="Project One">
-                        <h4>Project One</h4>
-                        <p>A description of the project goes here.</p>
-                    </div>
-                    <div class="project">
-                        <img src="project-placeholder.png" alt="Project Two">
-                        <h4>Project Two</h4>
-                        <p>A description of the project goes here.</p>
-                    </div>
-                    <div class="project">
-                        <img src="project-placeholder.png" alt="Project Three">
-                        <h4>Project Three</h4>
-                        <p>A description of the project goes here.</p>
-                    </div>
+                <div class="project">
+                    <img src="project-placeholder.png" alt="Portfolio Project">
+                    <h4>Portfolio Project</h4>
+                    <p>A description of the project goes here.</p>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 </html>
